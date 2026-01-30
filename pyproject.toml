@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "savgol-filter"
+version = "1.0.0"
+description = "Savitzky-Golay filter for non-uniformly spaced data"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Julio Montecinos", email = "julio.montecinos@etsmtl.ca"}
+]
+keywords = ["signal-processing", "smoothing", "savitzky-golay", "filtering"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+dependencies = ["numpy>=1.20.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "pytest-cov>=3.0", "matplotlib>=3.5"]
+scipy = ["scipy>=1.8"]
+
+[project.urls]
+Homepage = "https://github.com/soubsoub/savgol-filter"
+Repository = "https://github.com/soubsoub/savgol-filter.git"
