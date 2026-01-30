@@ -8,6 +8,7 @@ Reference: https://dsp.stackexchange.com/questions/1676/
 """
 
 import numpy as np
+import math
 from typing import Optional, Tuple
 from dataclasses import dataclass
 
