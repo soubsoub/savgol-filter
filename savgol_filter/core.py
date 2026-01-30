@@ -264,7 +264,7 @@ def smooth_with_derivatives(
                         f"with polynomial degree {config.polynomial_degree}")
     
     results = {order: np.full(n_points, np.nan) for order in derivative_orders}
-    factorials = np.array([np.math.factorial(k) for k in range(polynomial_order)])
+    factorials = np.array([math.factorial(k) for k in range(polynomial_order)])
     
     for i in range(half_window, n_points - half_window):
         window_indices = np.arange(i - half_window, i + half_window + 1)
