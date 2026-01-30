@@ -94,6 +94,10 @@ def should_use_uniform_approximation(
     if noise_estimate == 0:
         return False
     
+    # simple output in case of uniform spacing
+    return is_approximately_uniform(x, tolerance=0.05)
+    
+    # Evaluate signal variation criterion
     half_window = window_size // 2
     threshold = np.sqrt(half_window) * noise_estimate
     

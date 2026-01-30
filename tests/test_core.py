@@ -83,12 +83,13 @@ class TestAutoDetection:
     """Test auto-detection of uniform spacing"""
     
     def test_uniform_detection(self):
-        """Uniform spacing should trigger scipy"""
-        x = np.linspace(0, 10, 50)
-        y = np.sin(x) + 0.01 * np.random.randn(len(x))
+        """Uniform spacing triggers scipy optimization"""
+        x_uniform = np.linspace(0, 10, 50)
+        x_nonuniform = np.array([0, 0.5, 1.5, 3, 5, 8, 12, 17, 23, 30])
+        y = np.sin(x_uniform[:10])
         
-        use_uniform = should_use_uniform_approximation(x, y, window_size=7)
-        assert use_uniform
+        assert should_use_uniform_approximation(x_uniform, y, 7)
+        assert not should_use_uniform_approximation(x_nonuniform, y, 7)
     
     def test_nonuniform_detection(self):
         """Nonuniform spacing should use custom algorithm"""
