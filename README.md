@@ -1,5 +1,7 @@
 # Savitzky-Golay Filter
 
+![CI](https://github.com/soubsoub/savgol-filter/actions/workflows/tests.yml/badge.svg)
+
 Production-quality Savitzky-Golay filter for non-uniformly spaced data with auto-detection.
 
 ## Installation
